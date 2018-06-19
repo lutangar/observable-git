@@ -6,6 +6,8 @@ const headers = {
     Accept: 'application/vnd.github.v3+json'
 };
 
+const createRepositoryURL = (user, repo) => `git@github.com:${user}/${repo}.git`;
+
 const createRepository = endpoint => (options = {}) => fetch(endpoint, {
     body: JSON.stringify(options),
     headers,
@@ -21,6 +23,7 @@ const deleteRepository = owner => repository => fetch(`${baseURL}/repos/${owner}
 });
 
 module.exports = {
+    createRepositoryURL,
     createUserRepository,
     createOrganizationRepository,
     deleteRepository,
