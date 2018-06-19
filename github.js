@@ -13,7 +13,7 @@ const createRepository = endpoint => (options = {}) => fetch(endpoint, {
 });
 
 const createUserRepository = createRepository(`${baseURL}/user/repos`);
-const createOrganizationRepository = organization => createOrganizationRepository(`${baseURL}/orgs/${organization}/repos`);
+const createOrganizationRepository = organization => createRepository(`${baseURL}/orgs/${organization}/repos`);
 
 const deleteRepository = owner => repository => fetch(`${baseURL}/repos/${owner}/${repository}`, {
     headers,
