@@ -1,6 +1,6 @@
 {
   "name": "observable-git",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Observable git process for instrumentation",
   "main": "index.js",
   "scripts": {
